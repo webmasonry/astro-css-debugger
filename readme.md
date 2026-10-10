@@ -36,9 +36,9 @@ pnpm install @webmasonry/astro-css-debugger
 
 ```js
 import { defineConfig } from "astro/config";
-import astroCssDebugger from "@webmasonry/astro-css-debugger";
+import webmasonrycssDebugger from "@webmasonry/astro-css-debugger";
 
 export default defineConfig({
-  integrations: [astroCssDebugger()],
+  integrations: [webmasonrycssDebugger()],
 });
 ```

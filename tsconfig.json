@@ -20,7 +20,6 @@
       "DOM",
       "DOM.Iterable"
     ],
-
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "noEmit": false,
@@ -40,6 +39,6 @@
     "types": ["node"],
     "verbatimModuleSyntax": true
   },
-  "exclude": ["dist"],
-  "extends": "astro/tsconfigs/strict"
+  "exclude": ["dist", "scripts"],
+  "extends": "astro/tsconfigs/strictest"
 }

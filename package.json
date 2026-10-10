@@ -1,8 +1,15 @@
 {
-  "author": "Matthew Mason",
+  "author": {
+    "email": "webmasonry.github@gmail.com",
+    "name": "Matthew Mason"
+  },
+  "bugs": {
+    "url": "https://github.com/webmasonry/astro-css-debugger/issues"
+  },
   "description": "Astro Toolbar Integration for CSS Debugging",
   "devDependencies": {
     "@biomejs/biome": "2.5.15",
+    "@changesets/cli": "^3.0.3",
     "@types/node": "^22.10.6",
     "astro": "^7.3.8",
     "typescript": "^7.0.2"
@@ -23,20 +30,25 @@
   ],
   "license": "MIT",
   "main": "./dist/index.js",
-  "name": "astro-css-debugger",
+  "name": "@webmasonry/astro-css-debugger",
   "peerDependencies": {
     "astro": "^4.6.1"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/webmasonry/astro-css-debugger.git"
+    "url": "git+https://github.com/webmasonry/astro-css-debugger.git"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && node scripts/copy-assets.mjs",
+    "changeset": "changeset",
     "dev": "tsc --watch",
-    "prepare": "tsc"
+    "release": "pnpm build && changeset publish",
+    "version-packages": "changeset version"
   },
   "type": "module",
   "types": "./dist/index.d.ts",
-  "version": "0.0.1"
+  "version": "1.0.0"
 }
